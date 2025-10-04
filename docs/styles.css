@@ -176,13 +176,13 @@ input[type="email"] :focus, input[type="password"] :focus
     box-shadow: 0 0 0 3px rgba(93,126,245,0.1);
 }
 
-/* Placeholder text styling */
+/* Placeholder text Styling */
 input::placeholder {
     color: var(--text-placehodler);
     opacity: 1;
 }
 
-/* Buttone Style */
+/* Buttone Styling */
 button [type="submit"] {
     padding: 0.875rem 2.5rem;
     font-size: var(--font-size-base);

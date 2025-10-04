@@ -9,35 +9,30 @@
     <body>
         <!-- Chloe Ogamba - Lab 5 -->
 
-        <section id ="login-info">
-            <h1> Super Ai Dash </h1>
-            <p> Ai powered finance from Apes, alt-coins, 
-                and flat currency, we promise you won't 
-                lose <em><strong>all</strong></em> of it </p>
+        <section id="login-info">
+            <h1>Super Ai Dash</h1>
+            <p>Ai powered finance from Apes, alt-coins, and fiat currency, we promise you won't lose <em>all</em> of it.</p>
         </section>
 
         <section id="login-form">
-            <form action = "login.php" method = "post">
+            <h2>Login Form</h2>
+            <form action="login.php" method="post">
                 <form-field>
-                    <label for = "emailField">Email Address</label>
-                    <input type = "email" name = "email" id = "emailField"
-                    placeholder = "you@example.com" autofocus required>
+                    <label for="emailField">Email Address</label>
+                    <input type="email" name="email" id="emailField" placeholder="you@example.com" autofocus required>
                 </form-field>
 
                 <form-field>
-                    <label for = "passwordField">Password</label>
-                    <input type = "password" name = "password" id="passwordField"
-                    placeholder = "Enter your password" required >
+                    <label for="passwordField">Password</label>
+                    <input type="password" name="password" id="passwordField" placeholder="Enter your password" required>
                 </form-field>
                 
                 <form-field>
-                    <button type = "submit">
-                        Sign In
-                    </button> 
+                    <button type="submit">Sign In</button>
+                    <div class="password-recovery">
+                        <a href="forgot.php">Forgot password?</a>
+                    </div>
                 </form-field>
-                <passwordrecovery>
-                    <a href = "forgot.php"> Forgot password?</a>
-                </passwordrecovery>
             </form>
         </section>
     </body>

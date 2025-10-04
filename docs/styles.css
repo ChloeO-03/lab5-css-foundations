@@ -56,3 +56,47 @@ body {
     line-height: 1.5;
 }
 
+/* Layout with CSS Grid*/
+
+body{
+    display: grid;
+    grid-template-columns: 40%, 60%;
+    padding: 1.25 rem;
+    padding: 0;
+}
+
+/* Left Section*/
+
+#login-info {
+    background: linear-gradient(165deg, #6eb1f7 0%, #4a8fe8 50%, #3d82dd 100%);
+    color: var(--text-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 2 2px 8px #0c00000f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+#login-info h1 {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-black);
+    line-height: 1.1;
+    letter-spacing: -0.023em;
+    margin-bottom: var(--spacing-lg);
+}
+
+#login-info p {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.7;
+    max-width: 28rem;
+}
+
+#login-info em {
+    font-style: italic;
+    font-weight: 500;
+}

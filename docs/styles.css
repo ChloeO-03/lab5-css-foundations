@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700;900&display=swap');
-
 :root {
     /* Colors*/
     --primary-color: #4a90e2; 
@@ -23,8 +21,7 @@
 
 
     /*Typography*/
-    --font: 'Comfortaa', sans-serif;
-    display: grid;
+    --font: sans-serif;
 
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
@@ -58,16 +55,14 @@ body {
     background-color: var(--background-gray);
     min-height: 100vh;
     line-height: 1.5;
-}
 
 /* Layout with CSS Grid*/
 
-body{
+
     font-family: 'Comfortaa', sans-serif;
     display: grid !important;
-    grid-template-columns: 40%, 60% !important;
+    grid-template-columns: 40% 60% !important;
     padding: 1.25rem;
-    padding: 0;
 }
 
 /* Left Section*/
@@ -75,7 +70,7 @@ body{
 #login-info {
     background: linear-gradient(165deg, #6eb1f7 0%, #4a8fe8 50%, #3d82dd 100%);
     color: var(--text-light);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xl) 3rem;
     border-radius: var(--border-radius-lg);
     box-shadow: 0 2px 8px #0000000f;
 
@@ -99,11 +94,12 @@ body{
     font-weight: var(--font-weight-normal);
     line-height: 1.7;
     max-width: 28rem;
+    text-align: left;
 }
 
 #login-info em {
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 /* Right Section*/
@@ -145,6 +141,9 @@ form-field {
 
 form-field:last-of-type {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 label{
@@ -186,6 +185,19 @@ input::placeholder {
     opacity: 1;
 }
 
+/* Invalid input styling */
+input[type="email"]:invalid:not(:placeholder-shown),
+input[type="password"]:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* Valid input styling (optional) */
+input[type="email"]:valid:not(:placeholder-shown),
+input[type="password"]:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+}
+
 /* Buttone Styling */
 button[type="submit"] {
     padding: 0.875rem 2.5rem;
@@ -220,8 +232,10 @@ button [type="submit"]:active {
 
 .password-recovery {
     display: inline-block;
-    margin-left: var(--spacing-xl);
+    margin-left: auto;
     vertical-align: middle;
+    flex: 1;
+    text-align: right;
 }
 
 .password-recovery a {
@@ -236,47 +250,3 @@ button [type="submit"]:active {
     text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 64em) {
-    body {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-    
-    #login-info {
-        min-height: 40vh;
-        padding: var(--spacing-xl);
-        margin-bottom: var(--spacing-md);
-    }
-    
-    #login-info h1 {
-        font-size: 2rem;
-    }
-    
-    #login-info p {
-        font-size: var(--font-size-base);
-    }
-    
-    form {
-        padding: 0 var(--spacing-sm);
-    }
-}
-
-@media (max-width: 40em) {
-    body {
-        padding: 0.5rem;
-    }
-    
-    button[type="submit"] {
-        display: block;
-        width: 100%;
-        margin-bottom: var(--spacing-sm);
-    }
-    
-    .password-recovery {
-        display: block;
-        width: 100%;
-        margin: var(--spacing-sm) 0 0 0;
-        text-align: center;
-    }
-}

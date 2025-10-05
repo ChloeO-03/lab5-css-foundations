@@ -4,8 +4,7 @@
 A modern, responsive login page featuring a two-column layout with CSS Grid, custom styling, and form validation.
 
 ## Live Demo
-
-[View Live Site](https://your-username.github.io/your-repo-name)
+[View Live Site](https://chloeo-03.github.io/lab5-css-foundations/)
 
 ## Features
 
